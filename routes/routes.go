@@ -9,6 +9,7 @@ func HandleRequests()  {
   r := gin.Default()
   r.GET("/alunos", controllers.ExibeTodosOsAlunos)
   r.POST("/alunos", controllers.CriaNovoAluno)
+  r.GET("/alunos/:id", controllers.BuscaAlunoPorId)
   r.GET("/:nome", controllers.Saudacao)
   r.Run()
 }
