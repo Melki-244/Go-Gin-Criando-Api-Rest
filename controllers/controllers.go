@@ -8,3 +8,9 @@ func ExibeTodosOsAlunos(c *gin.Context) {
     "nome":"Melki",
   })
 }
+func Saudacao(c *gin.Context)  {
+  nome := c.Params.ByName("nome")
+  c.JSON(200,gin.H{
+    "Api Diz": "Eai " + nome + ", Tudo Beleza?",
+  })
+}
