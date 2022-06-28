@@ -42,3 +42,9 @@ func BuscaAlunoPorId(c *gin.Context)  {
   }
   c.JSON(http.StatusOK, aluno)
 }
+func DeletaAlunoPorId(c *gin.Context)  {
+  var velhoaluno models.Aluno
+  id := c.Params.ByName("id")
+  database.DB.Delete(&velhoaluno, id)
+  c.JSON(http.StatusOK, gin.H{"data":"Aluno Deletado Com Sucesso!"})
+}
