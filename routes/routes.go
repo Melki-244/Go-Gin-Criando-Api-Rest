@@ -8,6 +8,7 @@ import (
 func HandleRequests()  {
   r := gin.Default()
   r.GET("/alunos", controllers.ExibeTodosOsAlunos)
+  r.POST("/alunos", controllers.CriaNovoAluno)
   r.GET("/:nome", controllers.Saudacao)
   r.Run()
 }
