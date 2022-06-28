@@ -1,15 +1,8 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import "github.com/Melki-244/Go-Gin-Criando-Api-Rest/routes"
 
-func ExibeTodosOsAlunos(c *gin.Context) {
-  c.JSON(200, gin.H{
-    "id":"1",
-    "nome":"Melki",
-  })
-}
+
 func main() {
-  r := gin.Default()
-  r.GET("/alunos", ExibeTodosOsAlunos)
-  r.Run()
+  routes.HandleRequests() 
 }
