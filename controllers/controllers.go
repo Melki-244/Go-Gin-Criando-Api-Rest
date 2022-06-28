@@ -1,12 +1,12 @@
 package controllers
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/Melki-244/Go-Gin-Criando-Api-Rest/models"
+	"github.com/gin-gonic/gin"
+)
 
 func ExibeTodosOsAlunos(c *gin.Context) {
-  c.JSON(200, gin.H{
-    "id":"1",
-    "nome":"Melki",
-  })
+  c.JSON(200, models.Alunos)
 }
 func Saudacao(c *gin.Context)  {
   nome := c.Params.ByName("nome")
